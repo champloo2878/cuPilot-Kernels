@@ -1,346 +1,346 @@
-case,gen,target_latency,llm_latency,file
-1,sakana,7.223541784286499,26.078494720458984,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-1,0,7.221432332992554,8.236339263916015,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case1-gen0.log
-1,1,7.227023420333862,7.580221471786499,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case1-gen1.log
-1,2,7.220408334732055,7.56873215675354,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case1-gen2.log
-1,3,7.221125135421753,4.870942697525025,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case1-gen3.log
-2,sakana,7.264706583023071,16.781844596862793,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-2,0,7.276974058151245,8.078458881378173,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case2-gen0.log
-2,1,7.267860498428345,3.6692173004150392,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case2-gen1.log
-2,2,7.277035484313965,2.35943941116333,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case2-gen2.log
-2,3,7.272079315185547,2.2668698501586912,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case2-gen3.log
-3,sakana,14.409850940704345,51.89296104431153,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-3,0,14.403870544433595,9.244180450439453,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case3-gen0.log
-3,1,14.416609249114991,4.321382398605347,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case3-gen1.log
-3,2,14.478417930603028,3.8807756662368775,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case3-gen2.log
-3,3,14.49056266784668,3.5881164121627807,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case3-gen3.log
-4,sakana,4.890705881118774,5.27943681716919,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-4,0,4.9049600410461425,3.628666868209839,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case4-gen0.log
-4,1,4.8927334022521975,3.5976397037506103,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case4-gen1.log
-4,2,4.892897224426269,3.596922879219055,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case4-gen2.log
-4,3,4.893183946609497,3.595673599243164,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case4-gen3.log
-5,sakana,4.881264657974243,4.881756172180176,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-5,0,4.881387538909912,7.085445098876953,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case5-gen0.log
-5,1,4.87405571937561,4.85767165184021,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case5-gen1.log
-5,2,4.8741581249237065,4.844195880889893,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case5-gen2.log
-5,3,4.874526767730713,4.824432573318481,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case5-gen3.log
-6,sakana,3.638005781173706,28.539883651733398,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-6,0,3.648614373207092,16.266281089782716,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case6-gen0.log
-6,1,3.636428861618042,5.276979160308838,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case6-gen1.log
-6,2,3.6404224634170532,5.222256660461426,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case6-gen2.log
-6,3,3.6410368633270265,4.546170797348022,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case6-gen3.log
-7,sakana,7.57811203956604,36.867522430419925,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-7,0,7.577415704727173,12.027207622528076,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case7-gen0.log
-7,1,7.573893213272095,10.154946537017823,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case7-gen1.log
-7,2,7.575203876495362,9.962065906524659,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case7-gen2.log
-7,3,7.5703911781311035,9.494118366241455,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case7-gen3.log
-8,sakana,15.406141395568847,31.598264236450195,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-8,0,15.419392013549805,16.92061695098877,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case8-gen0.log
-8,1,15.407943515777587,13.533102073669433,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case8-gen1.log
-8,2,15.415336894989014,13.515468826293946,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case8-gen2.log
-8,3,15.41660659790039,13.519708137512207,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case8-gen3.log
-9,sakana,4.081315870285034,8.419778575897217,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-9,0,4.061409292221069,5.655572509765625,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case9-gen0.log
-9,1,4.085719022750855,5.343375387191773,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case9-gen1.log
-9,2,4.057968626022339,5.287403564453125,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case9-gen2.log
-9,3,4.066181116104126,5.2013055610656735,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case9-gen3.log
-10,sakana,2.8079717636108397,9.535139865875244,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-10,0,2.8111666679382323,3.2636928129196168,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case10-gen0.log
-10,1,2.8119244050979613,2.346106848716736,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case10-gen1.log
-10,2,2.8109209060668947,1.4724915289878846,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case10-gen2.log
-10,3,2.8105317831039427,1.3138124680519103,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case10-gen3.log
-11,sakana,21.763685836791993,155.1039080810547,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-11,0,22.174392471313478,13.373952026367187,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case11-gen0.log
-11,1,21.788651542663573,9.676226463317871,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case11-gen1.log
-11,2,21.792296867370606,8.335974445343018,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case11-gen2.log
-11,3,21.795983238220217,7.991193532943726,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case11-gen3.log
-12,sakana,7.2584806823730466,0.08009727731347084,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-12,0,7.260323944091797,0.11524096176028252,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case12-gen0.log
-12,1,7.277486057281494,0.08138751775026322,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case12-gen1.log
-12,2,7.264727001190185,0.0793599970638752,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case12-gen2.log
-12,3,7.288606796264649,0.0791961570084095,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case12-gen3.log
-13,sakana,7.221329956054688,8.530902976989745,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-13,0,7.238615093231201,5.115330533981323,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case13-gen0.log
-13,1,7.223439388275146,4.6046821403503415,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case13-gen1.log
-13,2,7.232061443328857,2.2880870580673216,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case13-gen2.log
-13,3,7.235706825256347,1.455636477470398,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case13-gen3.log
-14,sakana,7.288852548599243,6.41171462059021,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-14,0,7.293788232803345,0.9889382445812225,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case14-gen0.log
-14,1,7.288361072540283,0.692879364490509,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case14-gen1.log
-14,2,7.295918140411377,0.6337331211566926,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case14-gen2.log
-14,3,7.2963277530670165,0.5858303987979889,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case14-gen3.log
-15,sakana,7.290122327804565,10.968965091705321,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-15,0,7.314534425735474,1.7748172855377198,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case15-gen0.log
-15,1,7.294689388275146,1.2198912000656128,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case15-gen1.log
-15,2,7.294812202453613,0.45381632149219514,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case15-gen2.log
-15,3,7.295877180099487,0.41719808101654055,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case15-gen3.log
-16,sakana,8.019599332809449,30.709329986572264,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-16,0,7.999590368270874,6.266613693237304,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case16-gen0.log
-16,1,7.980154886245727,4.098662481307984,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case16-gen1.log
-16,2,7.959572458267212,3.6043161869049074,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case16-gen2.log
-16,3,7.9713075160980225,3.521904559135437,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case16-gen3.log
-17,sakana,7.644016542434692,40.05711891174317,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-17,0,7.684096012115479,8.8144895362854,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case17-gen0.log
-17,1,7.64467191696167,8.572887115478515,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case17-gen1.log
-17,2,7.658229751586914,2.8215910673141478,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case17-gen2.log
-17,3,7.653519344329834,2.6371072483062745,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case17-gen3.log
-18,sakana,7.449538602828979,24.762286109924318,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-18,0,7.443599424362183,10.791649341583252,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case18-gen0.log
-18,1,7.452180547714233,4.1314714241027835,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case18-gen1.log
-18,2,7.451279401779175,3.52014328956604,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case18-gen2.log
-18,3,7.44714243888855,0.7901388764381408,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case18-gen3.log
-19,sakana,7.324631052017212,7.907368993759155,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-19,0,7.501926422119141,7.267020797729492,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case19-gen0.log
-19,1,7.32483585357666,7.205519313812256,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case19-gen1.log
-19,2,7.314124841690063,7.196631107330322,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case19-gen2.log
-19,3,7.310028762817383,7.1963034343719485,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case19-gen3.log
-20,sakana,7.329423341751099,8.616366100311279,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-20,0,7.328194580078125,7.260426292419433,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case20-gen0.log
-20,1,7.330570211410523,7.177502593994141,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case20-gen1.log
-20,2,7.31971586227417,7.161876535415649,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case20-gen2.log
-20,3,7.318835220336914,7.159296026229859,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case20-gen3.log
-21,sakana,7.25612548828125,7.294382095336914,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-21,0,7.253135414123535,7.228252191543579,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case21-gen0.log
-21,1,7.239413709640503,7.214366722106933,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case21-gen1.log
-21,2,7.236300764083862,7.216312313079834,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case21-gen2.log
-21,3,7.236300764083862,7.216312313079834,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case21-gen3.log
-22,sakana,7.261777935028076,7.233699836730957,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-22,0,7.256350765228271,7.306792964935303,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case22-gen0.log
-22,1,7.255572509765625,7.248199663162231,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case22-gen1.log
-22,2,7.257477188110352,7.235399627685547,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case22-gen2.log
-22,3,7.257477188110352,7.235399627685547,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case22-gen3.log
-23,sakana,15.176540222167969,19.541299095153807,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-23,0,15.17305850982666,5.048094720840454,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case23-gen0.log
-23,1,15.169269714355469,4.02350079536438,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case23-gen1.log
-23,2,15.169269714355469,4.02350079536438,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case23-gen2.log
-23,3,15.169269714355469,4.02350079536438,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case23-gen3.log
-24,sakana,15.085568008422852,16.016220207214356,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-24,0,15.09275650024414,14.479851531982423,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case24-gen0.log
-24,1,15.08423677444458,14.473277416229248,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case24-gen1.log
-24,2,15.090606117248536,12.065136623382568,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case24-gen2.log
-24,3,15.090606117248536,12.065136623382568,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case24-gen3.log
-25,sakana,18.04232711791992,7.975669851303101,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-25,0,18.026803283691407,7.230443563461304,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case25-gen0.log
-25,1,18.031882400512696,7.2291123485565185,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case25-gen1.log
-25,2,18.02524673461914,7.233658876419067,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case25-gen2.log
-25,3,18.02524673461914,7.233658876419067,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case25-gen3.log
-26,sakana,7.352995920181274,7.302307739257812,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-26,0,7.294525470733642,7.211069364547729,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case26-gen0.log
-26,1,7.295365104675293,7.210516414642334,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case26-gen1.log
-26,2,7.30581000328064,7.206174640655518,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case26-gen2.log
-26,3,7.30581000328064,7.206174640655518,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case26-gen3.log
-27,sakana,7.316172819137574,7.297720317840576,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-27,0,7.313817615509033,7.254261808395386,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case27-gen0.log
-27,1,7.297822704315186,7.183953943252564,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case27-gen1.log
-27,2,7.2989081859588625,7.182213087081909,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case27-gen2.log
-27,3,7.2989081859588625,7.182213087081909,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case27-gen3.log
-28,sakana,7.319429140090943,12.983070659637452,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-28,0,7.304458236694336,7.2623513984680175,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case28-gen0.log
-28,1,7.304458236694336,7.2623513984680175,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case28-gen1.log
-28,2,7.304458236694336,7.2623513984680175,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case28-gen2.log
-28,3,7.304458236694336,7.2623513984680175,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case28-gen3.log
-29,sakana,7.614791631698608,8.862986106872558,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-29,0,7.626301441192627,7.2506367874145505,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case29-gen0.log
-29,1,7.620259809494018,7.244247026443482,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case29-gen1.log
-29,2,7.620362205505371,7.218503723144531,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case29-gen2.log
-29,3,7.620362205505371,7.218503723144531,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case29-gen3.log
-30,sakana,25.46128902435303,8.638238849639892,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-30,0,25.44021499633789,7.233331203460693,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case30-gen0.log
-30,1,25.441238975524904,7.232061452865601,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case30-gen1.log
-30,2,25.439231986999513,7.235645389556884,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case30-gen2.log
-30,3,25.439231986999513,7.235645389556884,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case30-gen3.log
-31,sakana,7.31416579246521,7.303024616241455,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-31,0,7.297679347991943,7.247933444976806,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case31-gen0.log
-31,1,7.298396167755127,7.2467865371704105,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case31-gen1.log
-31,2,7.298170881271362,7.234252767562866,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case31-gen2.log
-31,3,7.298170881271362,7.234252767562866,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case31-gen3.log
-32,sakana,7.3240166187286375,8.286597175598144,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-32,0,7.320678415298462,7.267286996841431,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case32-gen0.log
-32,1,7.310356492996216,7.247892456054688,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case32-gen1.log
-32,2,7.307591686248779,7.236771783828735,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case32-gen2.log
-32,3,7.307591686248779,7.236771783828735,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case32-gen3.log
-34,sakana,17.00915195465088,13.194915885925292,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-34,0,17.008250694274903,13.022597122192384,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case34-gen0.log
-34,1,17.023180885314943,12.721336288452148,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case34-gen1.log
-34,2,17.01206008911133,12.712857551574707,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case34-gen2.log
-34,3,17.01206008911133,12.712857551574707,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case34-gen3.log
-35,sakana,17.448038482666014,23.560376319885254,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-35,0,17.456640090942383,13.07019260406494,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case35-gen0.log
-35,1,17.45848316192627,12.949667854309082,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case35-gen1.log
-35,2,17.45301498413086,12.907315158843994,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case35-gen2.log
-35,3,17.45301498413086,12.907315158843994,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case35-gen3.log
-36,sakana,23.173058586120604,9.42796796798706,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-36,0,23.188295783996583,9.407119331359864,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case36-gen0.log
-36,1,23.194521827697756,9.01640193939209,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case36-gen1.log
-36,2,23.17316093444824,9.01052417755127,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case36-gen2.log
-36,3,23.17316093444824,9.01052417755127,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case36-gen3.log
-37,sakana,13.789921283721924,5.743882207870484,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-37,0,13.792542743682862,0.8169267177581787,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case37-gen0.log
-37,1,13.795655670166015,0.6282239973545074,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case37-gen1.log
-37,2,13.796208629608154,0.3250585603713989,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case37-gen2.log
-37,3,13.796208629608154,0.3250585603713989,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case37-gen3.log
-39,sakana,15.980441589355468,20.193771476745606,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-39,0,15.988244495391847,14.509076557159425,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case39-gen0.log
-39,1,15.990804443359375,14.174556140899659,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case39-gen1.log
-39,2,15.990190105438232,8.208261089324951,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case39-gen2.log
-39,3,15.990190105438232,8.208261089324951,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case39-gen3.log
-40,sakana,9.820876846313476,4.373340158462525,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-40,0,9.834188766479492,1.1131904053688049,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case40-gen0.log
-40,1,9.818111972808838,1.1089510226249695,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case40-gen1.log
-40,2,9.803530311584472,1.1038310408592225,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case40-gen2.log
-40,3,9.803530311584472,1.1038310408592225,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case40-gen3.log
-42,sakana,16.918958129882814,12.415201072692872,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-42,0,16.92014575958252,4.189573163986206,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case42-gen0.log
-42,1,16.943103790283203,4.18836483001709,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case42-gen1.log
-42,2,16.943779373168944,4.179087371826172,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case42-gen2.log
-42,3,16.943779373168944,4.179087371826172,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case42-gen3.log
-43,sakana,6.949396572113037,3.644395613670349,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-43,0,6.949826459884644,3.3606451511383058,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case43-gen0.log
-43,1,6.9536152267456055,3.2519167709350585,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case43-gen1.log
-43,2,6.9536152267456055,3.2519167709350585,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case43-gen2.log
-43,3,6.9536152267456055,3.2519167709350585,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case43-gen3.log
-44,sakana,13.018521556854248,3.8507519960403442,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-44,0,13.054504947662354,3.8291865968704224,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case44-gen0.log
-44,1,13.042114601135253,3.5774464321136477,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case44-gen1.log
-44,2,13.039554481506348,2.4410111904144287,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case44-gen2.log
-44,3,13.038448600769042,2.4377753257751467,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case44-gen3.log
-46,sakana,14.884802494049072,9.311600551605224,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-46,0,14.869708881378173,7.163269090652466,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case46-gen0.log
-46,1,14.890188808441161,7.108976612091064,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case46-gen1.log
-46,2,14.911569843292236,6.50799108505249,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case46-gen2.log
-46,3,14.870302867889404,6.4934706878662105,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case46-gen3.log
-47,sakana,5.131386861801148,20.223365173339843,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-47,0,5.126369304656983,5.123952646255493,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case47-gen0.log
-47,1,5.123071994781494,4.987637720108032,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case47-gen1.log
-47,2,5.127987203598022,4.917903347015381,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case47-gen2.log
-47,3,5.123993606567383,4.889477081298828,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case47-gen3.log
-48,sakana,5.11918080329895,11.021660175323486,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-48,0,5.119836158752442,4.9060454750061036,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case48-gen0.log
-48,1,5.119078407287597,4.899205093383789,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case48-gen1.log
-48,2,5.124505577087402,4.868894729614258,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case48-gen2.log
-48,3,5.123174419403076,4.8677068710327145,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case48-gen3.log
-49,sakana,5.86110969543457,6.2700543880462645,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-49,0,5.856215028762818,5.040619506835937,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case49-gen0.log
-49,1,5.859717073440552,4.898140125274658,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case49-gen1.log
-49,2,5.8619084072113035,0.9501491224765778,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case49-gen2.log
-49,3,5.854474210739136,0.5314764738082886,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case49-gen3.log
-51,sakana,5.830328283309936,14.453084106445312,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-51,0,5.833236455917358,4.943851547241211,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case51-gen0.log
-51,1,5.831249847412109,4.937850894927979,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case51-gen1.log
-51,2,5.832499151229858,4.937666540145874,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case51-gen2.log
-51,3,5.832540102005005,4.937031679153442,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case51-gen3.log
-52,sakana,5.8364927768707275,6.140108823776245,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-52,0,5.833379802703857,5.119692802429199,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case52-gen0.log
-52,1,5.836902370452881,5.089525737762451,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case52-gen1.log
-52,2,5.8351410865783695,5.083115530014038,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case52-gen2.log
-52,3,5.834547157287598,5.078097953796386,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case52-gen3.log
-53,sakana,5.862870960235596,20.718428115844727,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-53,0,5.8520576286315915,2.3927808141708375,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case53-gen0.log
-53,1,5.851914234161377,0.11249664083123206,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case53-gen1.log
-53,2,5.851914234161377,0.11249664083123206,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case53-gen2.log
-53,3,5.851914234161377,0.11249664083123206,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case53-gen3.log
-54,sakana,5.045166053771973,13.469885396957398,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-54,0,5.035151376724243,4.115230684280395,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case54-gen0.log
-54,1,5.041602535247803,3.559096302986145,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case54-gen1.log
-54,2,5.048852434158325,3.4831565380096436,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case54-gen2.log
-54,3,5.045166053771973,3.4698853969573973,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case54-gen3.log
-56,sakana,5.185433588027954,379.8441351318359,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-56,0,5.1951206684112545,5.134684143066406,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case56-gen0.log
-56,1,5.195223064422607,5.109084167480469,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case56-gen1.log
-56,2,5.209866218566894,5.129175043106079,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case56-gen2.log
-56,3,5.199237165451049,5.136773128509521,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case56-gen3.log
-58,sakana,8.075243492126464,107.148349609375,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-58,0,8.090521507263183,7.775764446258545,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case58-gen0.log
-58,1,8.100126724243164,6.705356788635254,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case58-gen1.log
-58,2,8.26865659713745,6.434918394088745,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case58-gen2.log
-58,3,8.087654438018799,5.716910076141358,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case58-gen3.log
-59,sakana,8.436776885986328,16.798487095832826,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-59,0,8.555909118652345,5.190410270690918,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case59-gen0.log
-59,1,8.36798463821411,4.318924856185913,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case59-gen1.log
-59,2,8.440033283233642,4.0193228435516355,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case59-gen2.log
-59,3,8.436776885986328,3.7984870958328245,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case59-gen3.log
-60,sakana,5.547253704071045,61.59585296630859,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-60,0,5.566505050659179,22.155898818969728,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case60-gen0.log
-60,1,5.570252857208252,13.883310031890868,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case60-gen1.log
-60,2,5.5761304950714115,12.069560317993163,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case60-gen2.log
-60,3,5.558394870758057,11.542466583251953,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case60-gen3.log
-63,sakana,34.69737983703613,155.29228271484374,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-63,0,35.09841896057129,51.56003845214844,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case63-gen0.log
-63,1,34.897673797607425,47.72851722717285,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case63-gen1.log
-63,2,34.790481643676756,46.64147994995117,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case63-gen2.log
-63,3,34.837647399902345,45.02185974121094,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case63-gen3.log
-66,sakana,2.727710747718811,17.00745220184326,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-66,0,2.7354522371292114,4.9401446723937985,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case66-gen0.log
-66,1,2.732400689125061,4.9041408252716066,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case66-gen1.log
-66,2,2.730393648147583,4.869754905700684,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case66-gen2.log
-66,3,2.740408296585083,4.871823377609253,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case66-gen3.log
-70,sakana,18.132910079956055,143.10303741455078,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-70,0,18.123632507324217,49.52168426513672,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case70-gen0.log
-70,1,18.126376953125,36.31493087768555,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case70-gen1.log
-70,2,18.11709949493408,34.71167526245117,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case70-gen2.log
-70,3,18.11820529937744,33.26253059387207,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case70-gen3.log
-73,sakana,5.951549425125122,71.06451461791993,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-73,0,5.962649564743042,23.715594177246093,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case73-gen0.log
-73,1,5.952614364624023,21.629050788879393,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case73-gen1.log
-73,2,5.951733732223511,12.215603179931641,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case73-gen2.log
-73,3,5.952470979690552,9.71442174911499,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case73-gen3.log
-74,sakana,3.4026700401306154,6.879530162811279,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-74,0,3.4016255521774292,8.701685791015626,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case74-gen0.log
-74,1,3.4110259056091308,7.438561286926269,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case74-gen1.log
-74,2,3.4017893934249877,6.035415096282959,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case74-gen2.log
-74,3,3.4026700401306154,5.579530162811279,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case74-gen3.log
-78,sakana,5.0105548763275145,78.89389526367188,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-78,0,5.000806474685669,13.558333530426026,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case78-gen0.log
-78,1,4.994457597732544,13.498961811065675,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case78-gen1.log
-78,2,4.993044490814209,11.620823040008545,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case78-gen2.log
-78,3,4.992532482147217,11.618344955444336,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case78-gen3.log
-79,sakana,3.311882190704346,34.361036682128905,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-79,0,3.3027276754379273,4.131348533630371,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case79-gen0.log
-79,1,3.311411156654358,3.170713658332825,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case79-gen1.log
-79,2,3.30700795173645,2.5794970083236692,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case79-gen2.log
-79,3,3.3083596277236937,2.519859232902527,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case79-gen3.log
-81,sakana,1.9900006461143493,109.7696255493164,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-81,0,1.989672966003418,3.074314284324646,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case81-gen0.log
-81,1,1.9894681644439698,2.597969913482666,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case81-gen1.log
-81,2,1.9900825691223145,2.3928423166275024,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case81-gen2.log
-81,3,1.9895091247558594,2.3462297439575197,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case81-gen3.log
-82,sakana,3.817594861984253,30.190448532104494,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-82,0,3.811225562095642,2.0276223611831665,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case82-gen0.log
-82,1,3.813621735572815,1.9969023990631103,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case82-gen1.log
-82,2,3.818864631652832,1.9301785683631898,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case82-gen2.log
-82,3,3.814174675941467,1.818378245830536,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case82-gen3.log
-84,sakana,15.18921730041504,8.595312709808349,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-84,0,15.17686803817749,8.065699863433839,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case84-gen0.log
-84,1,15.190548629760743,7.7280665874481205,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case84-gen1.log
-84,2,15.175024814605713,7.536025619506836,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case84-gen2.log
-84,3,15.191040000915528,7.492280292510986,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case84-gen3.log
-86,sakana,5.910118455886841,87.84809982299805,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-86,0,5.905223693847656,26.18951690673828,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case86-gen0.log
-86,1,5.9034624195098875,12.504391593933105,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case86-gen1.log
-86,2,5.90352388381958,11.364126777648925,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case86-gen2.log
-86,3,5.899612150192261,9.217576904296875,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case86-gen3.log
-88,sakana,2.748231625556946,0.30869504153728483,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-88,0,2.7450776958465575,0.3052339208126068,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case88-gen0.log
-88,1,2.7459583282470703,0.30449663937091825,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case88-gen1.log
-88,2,2.7442994594573973,0.30357504248619077,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case88-gen2.log
-88,3,2.7463884258270266,0.3035955250263214,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case88-gen3.log
-89,sakana,7.969894390106202,27.6397261428833,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-89,0,7.975977020263672,7.368069105148315,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case89-gen0.log
-89,1,7.9574015426635745,5.115760612487793,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case89-gen1.log
-89,2,7.968993282318115,5.036666917800903,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case89-gen2.log
-89,3,7.957196779251099,5.027778549194336,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case89-gen3.log
-94,sakana,14.519070777893067,6.716375045776367,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-94,0,14.51986946105957,4.420341672897339,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case94-gen0.log
-94,1,14.51681791305542,4.418662338256836,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case94-gen1.log
-94,2,14.5100390625,4.404490280151367,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case94-gen2.log
-94,3,14.520586280822753,4.402073640823364,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case94-gen3.log
-96,sakana,9.890119667053222,4.601774063110351,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-96,0,9.631600646972656,4.478320636749268,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case96-gen0.log
-96,1,9.650688037872314,3.495649266242981,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case96-gen1.log
-96,2,9.625927734375,1.2389990425109862,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case96-gen2.log
-96,3,9.622732772827149,0.710123518705368,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case96-gen3.log
-98,sakana,6.6572083568573,5.314355192184448,/data/home/wuqidie/projects/draw_circule_latency_bylog/sakana_summary.log
-98,0,6.665687084197998,0.4371046406030655,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case98-gen0.log
-98,1,6.654730272293091,0.28932095766067506,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case98-gen1.log
-98,2,6.65380862236023,0.25960448920726775,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case98-gen2.log
-98,3,6.652620820999146,0.2588057637214661,/data/home/wuqidie/projects/draw_circule_latency_bylog/all_log_files/case98-gen3.log
+Problem_ID,Kernels,Target_PyTorch_Latency,Generated_Kernel_Latency,Ratio_to_Target
+1,AI_CUDA_Engineer Baseline,7.223541784286499,26.078494720458984,0.276992
+1,cuPilot Epoch0,7.221432332992554,8.236339263916015,0.876777
+1,cuPilot Epoch1,7.227023420333862,7.580221471786499,0.953405
+1,cuPilot Epoch2,7.220408334732055,7.56873215675354,0.953979
+1,cuPilot Epoch3,7.221125135421753,4.870942697525025,1.482490
+2,AI_CUDA_Engineer Baseline,7.264706583023071,16.781844596862793,0.432891
+2,cuPilot Epoch0,7.276974058151245,8.078458881378173,0.900787
+2,cuPilot Epoch1,7.267860498428345,3.6692173004150392,1.980766
+2,cuPilot Epoch2,7.277035484313965,2.35943941116333,3.084222
+2,cuPilot Epoch3,7.272079315185547,2.2668698501586912,3.207983
+3,AI_CUDA_Engineer Baseline,14.409850940704345,51.89296104431153,0.277684
+3,cuPilot Epoch0,14.403870544433595,9.244180450439453,1.558155
+3,cuPilot Epoch1,14.416609249114991,4.321382398605347,3.336111
+3,cuPilot Epoch2,14.478417930603028,3.8807756662368775,3.730805
+3,cuPilot Epoch3,14.49056266784668,3.5881164121627807,4.038487
+4,AI_CUDA_Engineer Baseline,4.890705881118774,5.27943681716919,0.926369
+4,cuPilot Epoch0,4.9049600410461425,3.628666868209839,1.351725
+4,cuPilot Epoch1,4.8927334022521975,3.5976397037506103,1.359984
+4,cuPilot Epoch2,4.892897224426269,3.596922879219055,1.360301
+4,cuPilot Epoch3,4.893183946609497,3.595673599243164,1.360853
+5,AI_CUDA_Engineer Baseline,4.881264657974243,4.881756172180176,0.999899
+5,cuPilot Epoch0,4.881387538909912,7.085445098876953,0.688932
+5,cuPilot Epoch1,4.87405571937561,4.85767165184021,1.003373
+5,cuPilot Epoch2,4.8741581249237065,4.844195880889893,1.006185
+5,cuPilot Epoch3,4.874526767730713,4.824432573318481,1.010383
+6,AI_CUDA_Engineer Baseline,3.638005781173706,28.539883651733398,0.127471
+6,cuPilot Epoch0,3.648614373207092,16.266281089782716,0.224305
+6,cuPilot Epoch1,3.636428861618042,5.276979160308838,0.689112
+6,cuPilot Epoch2,3.6404224634170532,5.222256660461426,0.697098
+6,cuPilot Epoch3,3.6410368633270265,4.546170797348022,0.800902
+7,AI_CUDA_Engineer Baseline,7.57811203956604,36.867522430419925,0.205550
+7,cuPilot Epoch0,7.577415704727173,12.027207622528076,0.630023
+7,cuPilot Epoch1,7.573893213272095,10.154946537017823,0.745833
+7,cuPilot Epoch2,7.575203876495362,9.962065906524659,0.760405
+7,cuPilot Epoch3,7.5703911781311035,9.494118366241455,0.797377
+8,AI_CUDA_Engineer Baseline,15.406141395568847,31.598264236450195,0.487563
+8,cuPilot Epoch0,15.419392013549805,16.92061695098877,0.911278
+8,cuPilot Epoch1,15.407943515777587,13.533102073669433,1.138537
+8,cuPilot Epoch2,15.415336894989014,13.515468826293946,1.140570
+8,cuPilot Epoch3,15.41660659790039,13.519708137512207,1.140306
+9,AI_CUDA_Engineer Baseline,4.081315870285034,8.419778575897217,0.484730
+9,cuPilot Epoch0,4.061409292221069,5.655572509765625,0.718125
+9,cuPilot Epoch1,4.085719022750855,5.343375387191773,0.764633
+9,cuPilot Epoch2,4.057968626022339,5.287403564453125,0.767479
+9,cuPilot Epoch3,4.066181116104126,5.2013055610656735,0.781762
+10,AI_CUDA_Engineer Baseline,2.8079717636108397,9.535139865875244,0.294487
+10,cuPilot Epoch0,2.8111666679382323,3.2636928129196168,0.861345
+10,cuPilot Epoch1,2.8119244050979613,2.346106848716736,1.198549
+10,cuPilot Epoch2,2.8109209060668947,1.4724915289878846,1.908956
+10,cuPilot Epoch3,2.8105317831039427,1.3138124680519103,2.139218
+11,AI_CUDA_Engineer Baseline,21.763685836791993,155.1039080810547,0.140317
+11,cuPilot Epoch0,22.174392471313478,13.373952026367187,1.658028
+11,cuPilot Epoch1,21.788651542663573,9.676226463317871,2.251772
+11,cuPilot Epoch2,21.792296867370606,8.335974445343018,2.614247
+11,cuPilot Epoch3,21.795983238220217,7.991193532943726,2.727500
+12,AI_CUDA_Engineer Baseline,7.2584806823730466,0.08009727731347084,90.620817
+12,cuPilot Epoch0,7.260323944091797,0.11524096176028252,63.001244
+12,cuPilot Epoch1,7.277486057281494,0.08138751775026322,89.417717
+12,cuPilot Epoch2,7.264727001190185,0.0793599970638752,91.541422
+12,cuPilot Epoch3,7.288606796264649,0.0791961570084095,92.032329
+13,AI_CUDA_Engineer Baseline,7.221329956054688,8.530902976989745,0.846491
+13,cuPilot Epoch0,7.238615093231201,5.115330533981323,1.415083
+13,cuPilot Epoch1,7.223439388275146,4.6046821403503415,1.568716
+13,cuPilot Epoch2,7.232061443328857,2.2880870580673216,3.160746
+13,cuPilot Epoch3,7.235706825256347,1.455636477470398,4.970820
+14,AI_CUDA_Engineer Baseline,7.288852548599243,6.41171462059021,1.136802
+14,cuPilot Epoch0,7.293788232803345,0.9889382445812225,7.375373
+14,cuPilot Epoch1,7.288361072540283,0.692879364490509,10.518947
+14,cuPilot Epoch2,7.295918140411377,0.6337331211566926,11.512603
+14,cuPilot Epoch3,7.2963277530670165,0.5858303987979889,12.454676
+15,AI_CUDA_Engineer Baseline,7.290122327804565,10.968965091705321,0.664614
+15,cuPilot Epoch0,7.314534425735474,1.7748172855377198,4.121289
+15,cuPilot Epoch1,7.294689388275146,1.2198912000656128,5.979787
+15,cuPilot Epoch2,7.294812202453613,0.45381632149219514,16.074372
+15,cuPilot Epoch3,7.295877180099487,0.41719808101654055,17.487801
+16,AI_CUDA_Engineer Baseline,8.019599332809449,30.709329986572264,0.261145
+16,cuPilot Epoch0,7.999590368270874,6.266613693237304,1.276541
+16,cuPilot Epoch1,7.980154886245727,4.098662481307984,1.947014
+16,cuPilot Epoch2,7.959572458267212,3.6043161869049074,2.208345
+16,cuPilot Epoch3,7.9713075160980225,3.521904559135437,2.263351
+17,AI_CUDA_Engineer Baseline,7.644016542434692,40.05711891174317,0.190828
+17,cuPilot Epoch0,7.684096012115479,8.8144895362854,0.871757
+17,cuPilot Epoch1,7.64467191696167,8.572887115478515,0.891727
+17,cuPilot Epoch2,7.658229751586914,2.8215910673141478,2.714153
+17,cuPilot Epoch3,7.653519344329834,2.6371072483062745,2.902240
+18,AI_CUDA_Engineer Baseline,7.449538602828979,24.762286109924318,0.300842
+18,cuPilot Epoch0,7.443599424362183,10.791649341583252,0.689755
+18,cuPilot Epoch1,7.452180547714233,4.1314714241027835,1.803759
+18,cuPilot Epoch2,7.451279401779175,3.52014328956604,2.116755
+18,cuPilot Epoch3,7.44714243888855,0.7901388764381408,9.425106
+19,AI_CUDA_Engineer Baseline,7.324631052017212,7.907368993759155,0.926304
+19,cuPilot Epoch0,7.501926422119141,7.267020797729492,1.032325
+19,cuPilot Epoch1,7.32483585357666,7.205519313812256,1.016559
+19,cuPilot Epoch2,7.314124841690063,7.196631107330322,1.016326
+19,cuPilot Epoch3,7.310028762817383,7.1963034343719485,1.015803
+20,AI_CUDA_Engineer Baseline,7.329423341751099,8.616366100311279,0.850640
+20,cuPilot Epoch0,7.328194580078125,7.260426292419433,1.009334
+20,cuPilot Epoch1,7.330570211410523,7.177502593994141,1.021326
+20,cuPilot Epoch2,7.31971586227417,7.161876535415649,1.022039
+20,cuPilot Epoch3,7.318835220336914,7.159296026229859,1.022284
+21,AI_CUDA_Engineer Baseline,7.25612548828125,7.294382095336914,0.994755
+21,cuPilot Epoch0,7.253135414123535,7.228252191543579,1.003442
+21,cuPilot Epoch1,7.239413709640503,7.214366722106933,1.003472
+21,cuPilot Epoch2,7.236300764083862,7.216312313079834,1.002770
+21,cuPilot Epoch3,7.236300764083862,7.216312313079834,1.002770
+22,AI_CUDA_Engineer Baseline,7.261777935028076,7.233699836730957,1.003882
+22,cuPilot Epoch0,7.256350765228271,7.306792964935303,0.993097
+22,cuPilot Epoch1,7.255572509765625,7.248199663162231,1.001017
+22,cuPilot Epoch2,7.257477188110352,7.235399627685547,1.003051
+22,cuPilot Epoch3,7.257477188110352,7.235399627685547,1.003051
+23,AI_CUDA_Engineer Baseline,15.176540222167969,19.541299095153807,0.776639
+23,cuPilot Epoch0,15.17305850982666,5.048094720840454,3.005700
+23,cuPilot Epoch1,15.169269714355469,4.02350079536438,3.770167
+23,cuPilot Epoch2,15.169269714355469,4.02350079536438,3.770167
+23,cuPilot Epoch3,15.169269714355469,4.02350079536438,3.770167
+24,AI_CUDA_Engineer Baseline,15.085568008422852,16.016220207214356,0.941893
+24,cuPilot Epoch0,15.09275650024414,14.479851531982423,1.042328
+24,cuPilot Epoch1,15.08423677444458,14.473277416229248,1.042213
+24,cuPilot Epoch2,15.090606117248536,12.065136623382568,1.250761
+24,cuPilot Epoch3,15.090606117248536,12.065136623382568,1.250761
+25,AI_CUDA_Engineer Baseline,18.04232711791992,7.975669851303101,2.262171
+25,cuPilot Epoch0,18.026803283691407,7.230443563461304,2.493181
+25,cuPilot Epoch1,18.031882400512696,7.2291123485565185,2.494343
+25,cuPilot Epoch2,18.02524673461914,7.233658876419067,2.491857
+25,cuPilot Epoch3,18.02524673461914,7.233658876419067,2.491857
+26,AI_CUDA_Engineer Baseline,7.352995920181274,7.302307739257812,1.006941
+26,cuPilot Epoch0,7.294525470733642,7.211069364547729,1.011573
+26,cuPilot Epoch1,7.295365104675293,7.210516414642334,1.011767
+26,cuPilot Epoch2,7.30581000328064,7.206174640655518,1.013826
+26,cuPilot Epoch3,7.30581000328064,7.206174640655518,1.013826
+27,AI_CUDA_Engineer Baseline,7.316172819137574,7.297720317840576,1.002529
+27,cuPilot Epoch0,7.313817615509033,7.254261808395386,1.008210
+27,cuPilot Epoch1,7.297822704315186,7.183953943252564,1.015850
+27,cuPilot Epoch2,7.2989081859588625,7.182213087081909,1.016248
+27,cuPilot Epoch3,7.2989081859588625,7.182213087081909,1.016248
+28,AI_CUDA_Engineer Baseline,7.319429140090943,12.983070659637452,0.563767
+28,cuPilot Epoch0,7.304458236694336,7.2623513984680175,1.005798
+28,cuPilot Epoch1,7.304458236694336,7.2623513984680175,1.005798
+28,cuPilot Epoch2,7.304458236694336,7.2623513984680175,1.005798
+28,cuPilot Epoch3,7.304458236694336,7.2623513984680175,1.005798
+29,AI_CUDA_Engineer Baseline,7.614791631698608,8.862986106872558,0.859168
+29,cuPilot Epoch0,7.626301441192627,7.2506367874145505,1.051811
+29,cuPilot Epoch1,7.620259809494018,7.244247026443482,1.051905
+29,cuPilot Epoch2,7.620362205505371,7.218503723144531,1.055671
+29,cuPilot Epoch3,7.620362205505371,7.218503723144531,1.055671
+30,AI_CUDA_Engineer Baseline,25.46128902435303,8.638238849639892,2.947509
+30,cuPilot Epoch0,25.44021499633789,7.233331203460693,3.517081
+30,cuPilot Epoch1,25.441238975524904,7.232061452865601,3.517841
+30,cuPilot Epoch2,25.439231986999513,7.235645389556884,3.515821
+30,cuPilot Epoch3,25.439231986999513,7.235645389556884,3.515821
+31,AI_CUDA_Engineer Baseline,7.31416579246521,7.303024616241455,1.001526
+31,cuPilot Epoch0,7.297679347991943,7.247933444976806,1.006863
+31,cuPilot Epoch1,7.298396167755127,7.2467865371704105,1.007122
+31,cuPilot Epoch2,7.298170881271362,7.234252767562866,1.008835
+31,cuPilot Epoch3,7.298170881271362,7.234252767562866,1.008835
+32,AI_CUDA_Engineer Baseline,7.3240166187286375,8.286597175598144,0.883839
+32,cuPilot Epoch0,7.320678415298462,7.267286996841431,1.007347
+32,cuPilot Epoch1,7.310356492996216,7.247892456054688,1.008618
+32,cuPilot Epoch2,7.307591686248779,7.236771783828735,1.009786
+32,cuPilot Epoch3,7.307591686248779,7.236771783828735,1.009786
+34,AI_CUDA_Engineer Baseline,17.00915195465088,13.194915885925292,1.289069
+34,cuPilot Epoch0,17.008250694274903,13.022597122192384,1.306057
+34,cuPilot Epoch1,17.023180885314943,12.721336288452148,1.338160
+34,cuPilot Epoch2,17.01206008911133,12.712857551574707,1.338178
+34,cuPilot Epoch3,17.01206008911133,12.712857551574707,1.338178
+35,AI_CUDA_Engineer Baseline,17.448038482666014,23.560376319885254,0.740567
+35,cuPilot Epoch0,17.456640090942383,13.07019260406494,1.335607
+35,cuPilot Epoch1,17.45848316192627,12.949667854309082,1.348180
+35,cuPilot Epoch2,17.45301498413086,12.907315158843994,1.352180
+35,cuPilot Epoch3,17.45301498413086,12.907315158843994,1.352180
+36,AI_CUDA_Engineer Baseline,23.173058586120604,9.42796796798706,2.457906
+36,cuPilot Epoch0,23.188295783996583,9.407119331359864,2.464973
+36,cuPilot Epoch1,23.194521827697756,9.01640193939209,2.572481
+36,cuPilot Epoch2,23.17316093444824,9.01052417755127,2.571788
+36,cuPilot Epoch3,23.17316093444824,9.01052417755127,2.571788
+37,AI_CUDA_Engineer Baseline,13.789921283721924,5.743882207870484,2.400802
+37,cuPilot Epoch0,13.792542743682862,0.8169267177581787,16.883452
+37,cuPilot Epoch1,13.795655670166015,0.6282239973545074,21.959772
+37,cuPilot Epoch2,13.796208629608154,0.3250585603713989,42.442225
+37,cuPilot Epoch3,13.796208629608154,0.3250585603713989,42.442225
+39,AI_CUDA_Engineer Baseline,15.980441589355468,20.193771476745606,0.791355
+39,cuPilot Epoch0,15.988244495391847,14.509076557159425,1.101948
+39,cuPilot Epoch1,15.990804443359375,14.174556140899659,1.128134
+39,cuPilot Epoch2,15.990190105438232,8.208261089324951,1.948061
+39,cuPilot Epoch3,15.990190105438232,8.208261089324951,1.948061
+40,AI_CUDA_Engineer Baseline,9.820876846313476,4.373340158462525,2.245624
+40,cuPilot Epoch0,9.834188766479492,1.1131904053688049,8.834238
+40,cuPilot Epoch1,9.818111972808838,1.1089510226249695,8.853513
+40,cuPilot Epoch2,9.803530311584472,1.1038310408592225,8.881369
+40,cuPilot Epoch3,9.803530311584472,1.1038310408592225,8.881369
+42,AI_CUDA_Engineer Baseline,16.918958129882814,12.415201072692872,1.362762
+42,cuPilot Epoch0,16.92014575958252,4.189573163986206,4.038632
+42,cuPilot Epoch1,16.943103790283203,4.18836483001709,4.045279
+42,cuPilot Epoch2,16.943779373168944,4.179087371826172,4.054421
+42,cuPilot Epoch3,16.943779373168944,4.179087371826172,4.054421
+43,AI_CUDA_Engineer Baseline,6.949396572113037,3.644395613670349,1.906872
+43,cuPilot Epoch0,6.949826459884644,3.3606451511383058,2.068004
+43,cuPilot Epoch1,6.9536152267456055,3.2519167709350585,2.138313
+43,cuPilot Epoch2,6.9536152267456055,3.2519167709350585,2.138313
+43,cuPilot Epoch3,6.9536152267456055,3.2519167709350585,2.138313
+44,AI_CUDA_Engineer Baseline,13.018521556854248,3.8507519960403442,3.380774
+44,cuPilot Epoch0,13.054504947662354,3.8291865968704224,3.409211
+44,cuPilot Epoch1,13.042114601135253,3.5774464321136477,3.645649
+44,cuPilot Epoch2,13.039554481506348,2.4410111904144287,5.341866
+44,cuPilot Epoch3,13.038448600769042,2.4377753257751467,5.348503
+46,AI_CUDA_Engineer Baseline,14.884802494049072,9.311600551605224,1.598522
+46,cuPilot Epoch0,14.869708881378173,7.163269090652466,2.075827
+46,cuPilot Epoch1,14.890188808441161,7.108976612091064,2.094562
+46,cuPilot Epoch2,14.911569843292236,6.50799108505249,2.291271
+46,cuPilot Epoch3,14.870302867889404,6.4934706878662105,2.290039
+47,AI_CUDA_Engineer Baseline,5.131386861801148,20.223365173339843,0.253736
+47,cuPilot Epoch0,5.126369304656983,5.123952646255493,1.000472
+47,cuPilot Epoch1,5.123071994781494,4.987637720108032,1.027154
+47,cuPilot Epoch2,5.127987203598022,4.917903347015381,1.042718
+47,cuPilot Epoch3,5.123993606567383,4.889477081298828,1.047964
+48,AI_CUDA_Engineer Baseline,5.11918080329895,11.021660175323486,0.464465
+48,cuPilot Epoch0,5.119836158752442,4.9060454750061036,1.043577
+48,cuPilot Epoch1,5.119078407287597,4.899205093383789,1.044879
+48,cuPilot Epoch2,5.124505577087402,4.868894729614258,1.052499
+48,cuPilot Epoch3,5.123174419403076,4.8677068710327145,1.052482
+49,AI_CUDA_Engineer Baseline,5.86110969543457,6.2700543880462645,0.934778
+49,cuPilot Epoch0,5.856215028762818,5.040619506835937,1.161805
+49,cuPilot Epoch1,5.859717073440552,4.898140125274658,1.196315
+49,cuPilot Epoch2,5.8619084072113035,0.9501491224765778,6.169461
+49,cuPilot Epoch3,5.854474210739136,0.5314764738082886,11.015491
+51,AI_CUDA_Engineer Baseline,5.830328283309936,14.453084106445312,0.403397
+51,cuPilot Epoch0,5.833236455917358,4.943851547241211,1.179897
+51,cuPilot Epoch1,5.831249847412109,4.937850894927979,1.180929
+51,cuPilot Epoch2,5.832499151229858,4.937666540145874,1.181226
+51,cuPilot Epoch3,5.832540102005005,4.937031679153442,1.181386
+52,AI_CUDA_Engineer Baseline,5.8364927768707275,6.140108823776245,0.950552
+52,cuPilot Epoch0,5.833379802703857,5.119692802429199,1.139400
+52,cuPilot Epoch1,5.836902370452881,5.089525737762451,1.146846
+52,cuPilot Epoch2,5.8351410865783695,5.083115530014038,1.147946
+52,cuPilot Epoch3,5.834547157287598,5.078097953796386,1.148963
+53,AI_CUDA_Engineer Baseline,5.862870960235596,20.718428115844727,0.282979
+53,cuPilot Epoch0,5.8520576286315915,2.3927808141708375,2.445714
+53,cuPilot Epoch1,5.851914234161377,0.11249664083123206,52.018569
+53,cuPilot Epoch2,5.851914234161377,0.11249664083123206,52.018569
+53,cuPilot Epoch3,5.851914234161377,0.11249664083123206,52.018569
+54,AI_CUDA_Engineer Baseline,5.045166053771973,13.469885396957398,0.374552
+54,cuPilot Epoch0,5.035151376724243,4.115230684280395,1.223540
+54,cuPilot Epoch1,5.041602535247803,3.559096302986145,1.416540
+54,cuPilot Epoch2,5.048852434158325,3.4831565380096436,1.449505
+54,cuPilot Epoch3,5.045166053771973,3.4698853969573973,1.453986
+56,AI_CUDA_Engineer Baseline,5.185433588027954,379.8441351318359,0.013651
+56,cuPilot Epoch0,5.1951206684112545,5.134684143066406,1.011770
+56,cuPilot Epoch1,5.195223064422607,5.109084167480469,1.016860
+56,cuPilot Epoch2,5.209866218566894,5.129175043106079,1.015732
+56,cuPilot Epoch3,5.199237165451049,5.136773128509521,1.012160
+58,AI_CUDA_Engineer Baseline,8.075243492126464,107.148349609375,0.075365
+58,cuPilot Epoch0,8.090521507263183,7.775764446258545,1.040479
+58,cuPilot Epoch1,8.100126724243164,6.705356788635254,1.208008
+58,cuPilot Epoch2,8.26865659713745,6.434918394088745,1.284967
+58,cuPilot Epoch3,8.087654438018799,5.716910076141358,1.414690
+59,AI_CUDA_Engineer Baseline,8.436776885986328,16.798487095832826,0.502234
+59,cuPilot Epoch0,8.555909118652345,5.190410270690918,1.648407
+59,cuPilot Epoch1,8.36798463821411,4.318924856185913,1.937516
+59,cuPilot Epoch2,8.440033283233642,4.0193228435516355,2.099864
+59,cuPilot Epoch3,8.436776885986328,3.7984870958328245,2.221089
+60,AI_CUDA_Engineer Baseline,5.547253704071045,61.59585296630859,0.090059
+60,cuPilot Epoch0,5.566505050659179,22.155898818969728,0.251243
+60,cuPilot Epoch1,5.570252857208252,13.883310031890868,0.401219
+60,cuPilot Epoch2,5.5761304950714115,12.069560317993163,0.461999
+60,cuPilot Epoch3,5.558394870758057,11.542466583251953,0.481560
+63,AI_CUDA_Engineer Baseline,34.69737983703613,155.29228271484374,0.223433
+63,cuPilot Epoch0,35.09841896057129,51.56003845214844,0.680729
+63,cuPilot Epoch1,34.897673797607425,47.72851722717285,0.731170
+63,cuPilot Epoch2,34.790481643676756,46.64147994995117,0.745913
+63,cuPilot Epoch3,34.837647399902345,45.02185974121094,0.773794
+66,AI_CUDA_Engineer Baseline,2.727710747718811,17.00745220184326,0.160383
+66,cuPilot Epoch0,2.7354522371292114,4.9401446723937985,0.553719
+66,cuPilot Epoch1,2.732400689125061,4.9041408252716066,0.557162
+66,cuPilot Epoch2,2.730393648147583,4.869754905700684,0.560684
+66,cuPilot Epoch3,2.740408296585083,4.871823377609253,0.562502
+70,AI_CUDA_Engineer Baseline,18.132910079956055,143.10303741455078,0.126712
+70,cuPilot Epoch0,18.123632507324217,49.52168426513672,0.365974
+70,cuPilot Epoch1,18.126376953125,36.31493087768555,0.499144
+70,cuPilot Epoch2,18.11709949493408,34.71167526245117,0.521931
+70,cuPilot Epoch3,18.11820529937744,33.26253059387207,0.544703
+73,AI_CUDA_Engineer Baseline,5.951549425125122,71.06451461791993,0.083749
+73,cuPilot Epoch0,5.962649564743042,23.715594177246093,0.251423
+73,cuPilot Epoch1,5.952614364624023,21.629050788879393,0.275214
+73,cuPilot Epoch2,5.951733732223511,12.215603179931641,0.487224
+73,cuPilot Epoch3,5.952470979690552,9.71442174911499,0.612746
+74,AI_CUDA_Engineer Baseline,3.4026700401306154,6.879530162811279,0.494608
+74,cuPilot Epoch0,3.4016255521774292,8.701685791015626,0.390916
+74,cuPilot Epoch1,3.4110259056091308,7.438561286926269,0.458560
+74,cuPilot Epoch2,3.4017893934249877,6.035415096282959,0.563638
+74,cuPilot Epoch3,3.4026700401306154,5.579530162811279,0.609849
+78,AI_CUDA_Engineer Baseline,5.0105548763275145,78.89389526367188,0.063510
+78,cuPilot Epoch0,5.000806474685669,13.558333530426026,0.368836
+78,cuPilot Epoch1,4.994457597732544,13.498961811065675,0.369988
+78,cuPilot Epoch2,4.993044490814209,11.620823040008545,0.429664
+78,cuPilot Epoch3,4.992532482147217,11.618344955444336,0.429711
+79,AI_CUDA_Engineer Baseline,3.311882190704346,34.361036682128905,0.096385
+79,cuPilot Epoch0,3.3027276754379273,4.131348533630371,0.799431
+79,cuPilot Epoch1,3.311411156654358,3.170713658332825,1.044374
+79,cuPilot Epoch2,3.30700795173645,2.5794970083236692,1.282036
+79,cuPilot Epoch3,3.3083596277236937,2.519859232902527,1.312914
+81,AI_CUDA_Engineer Baseline,1.9900006461143493,109.7696255493164,0.018129
+81,cuPilot Epoch0,1.989672966003418,3.074314284324646,0.647192
+81,cuPilot Epoch1,1.9894681644439698,2.597969913482666,0.765778
+81,cuPilot Epoch2,1.9900825691223145,2.3928423166275024,0.831681
+81,cuPilot Epoch3,1.9895091247558594,2.3462297439575197,0.847960
+82,AI_CUDA_Engineer Baseline,3.817594861984253,30.190448532104494,0.126450
+82,cuPilot Epoch0,3.811225562095642,2.0276223611831665,1.879653
+82,cuPilot Epoch1,3.813621735572815,1.9969023990631103,1.909769
+82,cuPilot Epoch2,3.818864631652832,1.9301785683631898,1.978503
+82,cuPilot Epoch3,3.814174675941467,1.818378245830536,2.097569
+84,AI_CUDA_Engineer Baseline,15.18921730041504,8.595312709808349,1.767151
+84,cuPilot Epoch0,15.17686803817749,8.065699863433839,1.881655
+84,cuPilot Epoch1,15.190548629760743,7.7280665874481205,1.965634
+84,cuPilot Epoch2,15.175024814605713,7.536025619506836,2.013664
+84,cuPilot Epoch3,15.191040000915528,7.492280292510986,2.027559
+86,AI_CUDA_Engineer Baseline,5.910118455886841,87.84809982299805,0.067277
+86,cuPilot Epoch0,5.905223693847656,26.18951690673828,0.225480
+86,cuPilot Epoch1,5.9034624195098875,12.504391593933105,0.472111
+86,cuPilot Epoch2,5.90352388381958,11.364126777648925,0.519488
+86,cuPilot Epoch3,5.899612150192261,9.217576904296875,0.640039
+88,AI_CUDA_Engineer Baseline,2.748231625556946,0.30869504153728483,8.902740
+88,cuPilot Epoch0,2.7450776958465575,0.3052339208126068,8.993357
+88,cuPilot Epoch1,2.7459583282470703,0.30449663937091825,9.018025
+88,cuPilot Epoch2,2.7442994594573973,0.30357504248619077,9.039938
+88,cuPilot Epoch3,2.7463884258270266,0.3035955250263214,9.046209
+89,AI_CUDA_Engineer Baseline,7.969894390106202,27.6397261428833,0.288349
+89,cuPilot Epoch0,7.975977020263672,7.368069105148315,1.082506
+89,cuPilot Epoch1,7.9574015426635745,5.115760612487793,1.555468
+89,cuPilot Epoch2,7.968993282318115,5.036666917800903,1.582196
+89,cuPilot Epoch3,7.957196779251099,5.027778549194336,1.582647
+94,AI_CUDA_Engineer Baseline,14.519070777893067,6.716375045776367,2.161742
+94,cuPilot Epoch0,14.51986946105957,4.420341672897339,3.284784
+94,cuPilot Epoch1,14.51681791305542,4.418662338256836,3.285342
+94,cuPilot Epoch2,14.5100390625,4.404490280151367,3.294374
+94,cuPilot Epoch3,14.520586280822753,4.402073640823364,3.298579
+96,AI_CUDA_Engineer Baseline,9.890119667053222,4.601774063110351,2.149197
+96,cuPilot Epoch0,9.631600646972656,4.478320636749268,2.150717
+96,cuPilot Epoch1,9.650688037872314,3.495649266242981,2.760771
+96,cuPilot Epoch2,9.625927734375,1.2389990425109862,7.769116
+96,cuPilot Epoch3,9.622732772827149,0.710123518705368,13.550787
+98,AI_CUDA_Engineer Baseline,6.6572083568573,5.314355192184448,1.252684
+98,cuPilot Epoch0,6.665687084197998,0.4371046406030655,15.249637
+98,cuPilot Epoch1,6.654730272293091,0.28932095766067506,23.001204
+98,cuPilot Epoch2,6.65380862236023,0.25960448920726775,25.630561
+98,cuPilot Epoch3,6.652620820999146,0.2588057637214661,25.705072
