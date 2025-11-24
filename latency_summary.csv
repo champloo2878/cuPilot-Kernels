@@ -1,4 +1,4 @@
-Problem_ID,Kernels,Target_PyTorch_Latency,Generated_Kernel_Latency,Ratio_to_Target
+Problem_ID,Kernels,Target_PyTorch_Latency(ms),Generated_Kernel_Latency(ms),Ratio_to_Target
 1,AI_CUDA_Engineer Baseline,7.223541784286499,26.078494720458984,0.276992
 1,cuPilot Epoch0,7.221432332992554,8.236339263916015,0.876777
 1,cuPilot Epoch1,7.227023420333862,7.580221471786499,0.953405
