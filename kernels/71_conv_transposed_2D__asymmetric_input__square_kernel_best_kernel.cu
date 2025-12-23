@@ -9,13 +9,14 @@
 #define CHECK_CONTIGUOUS(x) TORCH_CHECK(x.is_contiguous(), #x " must be contiguous")
 #define CHECK_INPUT(x) CHECK_CUDA(x); CHECK_CONTIGUOUS(x)
 
-// Dynamic parallelism constants
-constexpr int CHILD_BLOCK_SIZE_X = 32;
-constexpr int CHILD_BLOCK_SIZE_Y = 8;
-constexpr int CHILD_TILE_IC = 8;
-constexpr int CHILD_TILE_KH = 3;
-constexpr int CHILD_TILE_KW = 3;
-
+// Tuning parameters for A100 and specific problem size
+// Problem: B=8, IC=32, OC=32, H=512, W=1024, K=3
+constexpr int TILE_W = 32;
+constexpr int TILE_H = 8;
+constexpr int TILE_IC = 16; 
+constexpr int KERNEL_DIM = 3;
+constexpr int INPUT_TILE_H = TILE_H + KERNEL_DIM - 1; // 10
+constexpr int INPUT_TILE_W = TILE_W + KERNEL_DIM - 1; // 34
 // PART-END
 
 // Part 2: (the main body of the custom kernel function)
@@ -40,167 +41,7 @@ __device__ __forceinline__ void write_output<__half>(__half* ptr, int idx, float
     ptr[idx] = __float2half(val);
 }
 
-// Child kernel for processing a single batch element
-template <typename scalar_t>
-__global__ void conv_transpose2d_child_kernel(
-    const scalar_t* __restrict__ input,
-    const scalar_t* __restrict__ weight,
-    const scalar_t* __restrict__ bias,
-    scalar_t* __restrict__ output,
-    const int batch_idx,
-    const int in_channels,
-    const int out_channels,
-    const int input_height,
-    const int input_width,
-    const int output_height,
-    const int output_width,
-    const int kernel_size,
-    const int stride,
-    const int padding,
-    const int output_padding,
-    const int groups) {
-    
-    const int output_spatial = output_height * output_width;
-    
-    // Thread coarsening: each thread computes 2 consecutive output elements in width dimension
-    const int spatial_idx_base = (blockIdx.x * blockDim.x + threadIdx.x) * 2;
-    const int channel_idx = blockIdx.y * blockDim.y + threadIdx.y;
-    
-    // Early exit for out-of-bounds threads
-    if (spatial_idx_base >= output_spatial || channel_idx >= out_channels)
-        return;
-    
-    // Decompose base indices for efficient memory access
-    const int w_base = spatial_idx_base % output_width;
-    const int h = spatial_idx_base / output_width;
-    const int c = channel_idx;
-    
-    // For groups=1 (given in problem spec)
-    const int group_out_channels = out_channels / groups;
-    const int group_in_channels = in_channels / groups;
-    const int g = c / group_out_channels;
-    const int group_c = c - g * group_out_channels;
-    
-    // Precompute memory offsets for this batch
-    const int input_batch_offset = batch_idx * in_channels * input_height * input_width;
-    const int weight_group_offset = g * group_in_channels * group_out_channels * kernel_size * kernel_size;
-    const int weight_channel_stride = group_out_channels * kernel_size * kernel_size;
-    
-    // Accumulators for two consecutive output elements
-    float result0 = 0.0f;
-    float result1 = 0.0f;
-    
-    // Precompute input height bounds checks for both output positions
-    bool h_in_bounds[3];
-    #pragma unroll
-    for (int kh = 0; kh < 3; kh++) {
-        const int input_h = h - kh;
-        h_in_bounds[kh] = (input_h >= 0 && input_h < input_height);
-    }
-    
-    // Precompute weight base indices for each kernel position
-    int weight_base_idx[9];
-    #pragma unroll
-    for (int kh = 0; kh < 3; kh++) {
-        #pragma unroll
-        for (int kw = 0; kw < 3; kw++) {
-            weight_base_idx[kh * 3 + kw] = weight_group_offset + group_c * 9 + (kh * 3 + kw);
-        }
-    }
-    
-    // Check if second output element is within bounds
-    const int w1 = w_base + 1;
-    const bool second_output_valid = (w1 < output_width);
-    
-    // Tiled computation with thread coarsening
-    #pragma unroll
-    for (int kh = 0; kh < CHILD_TILE_KH; kh++) {
-        if (!h_in_bounds[kh]) continue;
-        
-        const int input_h = h - kh;
-        const int input_h_offset = input_h * input_width;
-        
-        #pragma unroll
-        for (int kw = 0; kw < CHILD_TILE_KW; kw++) {
-            // Calculate input positions for both output elements
-            const int input_w0 = w_base - kw;
-            const int input_w1 = w1 - kw;
-            
-            const bool in_bounds0 = (input_w0 >= 0 && input_w0 < input_width);
-            const bool in_bounds1 = second_output_valid && (input_w1 >= 0 && input_w1 < input_width);
-            
-            if (in_bounds0 || in_bounds1) {
-                const int input_spatial_idx0 = input_h_offset + input_w0;
-                const int input_spatial_idx1 = input_h_offset + input_w1;
-                const int weight_idx_offset = weight_base_idx[kh * 3 + kw];
-                
-                // Process input channels in tiles of TILE_IC
-                for (int ic_tile = 0; ic_tile < group_in_channels; ic_tile += CHILD_TILE_IC) {
-                    // Load input values for both positions with coalesced access
-                    float input_vals0[CHILD_TILE_IC];
-                    float input_vals1[CHILD_TILE_IC];
-                    
-                    #pragma unroll
-                    for (int i = 0; i < CHILD_TILE_IC; i++) {
-                        const int ic = ic_tile + i;
-                        const int input_channel_offset = (g * group_in_channels + ic) * input_height * input_width;
-                        
-                        if (in_bounds0) {
-                            const int input_idx0 = input_batch_offset + input_channel_offset + input_spatial_idx0;
-                            input_vals0[i] = to_float(input[input_idx0]);
-                        }
-                        
-                        if (in_bounds1) {
-                            const int input_idx1 = input_batch_offset + input_channel_offset + input_spatial_idx1;
-                            input_vals1[i] = to_float(input[input_idx1]);
-                        }
-                    }
-                    
-                    // Load weight values with stride-aware access
-                    float weight_vals[CHILD_TILE_IC];
-                    #pragma unroll
-                    for (int i = 0; i < CHILD_TILE_IC; i++) {
-                        const int ic = ic_tile + i;
-                        const int weight_idx = weight_idx_offset + ic * weight_channel_stride;
-                        weight_vals[i] = to_float(weight[weight_idx]);
-                    }
-                    
-                    // FMA accumulation with ILP for both output positions
-                    #pragma unroll
-                    for (int i = 0; i < CHILD_TILE_IC; i++) {
-                        if (in_bounds0) {
-                            result0 += input_vals0[i] * weight_vals[i];
-                        }
-                        if (in_bounds1) {
-                            result1 += input_vals1[i] * weight_vals[i];
-                        }
-                    }
-                }
-            }
-        }
-    }
-    
-    // Add bias if provided (bias=False for this problem)
-    if (bias != nullptr) {
-        const float bias_val = to_float(bias[c]);
-        result0 += bias_val;
-        result1 += bias_val;
-    }
-    
-    // Coalesced write to output for first position
-    const int output_batch_offset = batch_idx * out_channels * output_spatial;
-    const int output_idx0 = output_batch_offset + c * output_spatial + spatial_idx_base;
-    write_output(output, output_idx0, result0);
-    
-    // Write second output if valid
-    if (second_output_valid) {
-        const int output_idx1 = output_idx0 + 1;
-        write_output(output, output_idx1, result1);
-    }
-}
-
-// Parent kernel using dynamic parallelism - REMOVED
-// Single kernel approach without dynamic parallelism
+// Optimized single kernel with tiling and SMEM caching
 template <typename scalar_t>
 __global__ void conv_transpose2d_single_kernel(
     const scalar_t* __restrict__ input,
@@ -219,146 +60,138 @@ __global__ void conv_transpose2d_single_kernel(
     const int padding,
     const int output_padding,
     const int groups) {
-    
+
+    // Grid dimensions: x -> width, y -> height, z -> batch
     const int batch_idx = blockIdx.z;
-    const int spatial_idx_base = (blockIdx.x * blockDim.x + threadIdx.x) * 2;
-    const int channel_idx = blockIdx.y * blockDim.y + threadIdx.y;
+    const int out_h_start = blockIdx.y * TILE_H;
+    const int out_w_start = blockIdx.x * TILE_W;
     
+    const int tx = threadIdx.x; // 0..31
+    const int ty = threadIdx.y; // 0..7
+    const int tid = ty * blockDim.x + tx; // 0..255
+
+    // Shared memory layout
+    // Input: [TILE_IC][INPUT_TILE_H][INPUT_TILE_W]
+    // Weight: [TILE_IC][KERNEL_DIM][KERNEL_DIM][OUT_CHANNELS] - Optimized for OC access in compute
+    // Note: OUT_CHANNELS is fixed to 32 for this optimization
+    
+    __shared__ float smem_input[TILE_IC][INPUT_TILE_H][INPUT_TILE_W];
+    __shared__ float smem_weight[TILE_IC][KERNEL_DIM][KERNEL_DIM][32];
+
+    // Register accumulation for all 32 output channels
+    float acc[32];
+    #pragma unroll
+    for (int i = 0; i < 32; ++i) acc[i] = 0.0f;
+
     const int output_spatial = output_height * output_width;
-    
-    // Early exit for out-of-bounds threads
-    if (batch_idx >= batch_size || spatial_idx_base >= output_spatial || channel_idx >= out_channels)
-        return;
-    
-    // Decompose base indices for efficient memory access
-    const int w_base = spatial_idx_base % output_width;
-    const int h = spatial_idx_base / output_width;
-    const int c = channel_idx;
-    
-    // For groups=1 (given in problem spec)
-    const int group_out_channels = out_channels / groups;
-    const int group_in_channels = in_channels / groups;
-    const int g = c / group_out_channels;
-    const int group_c = c - g * group_out_channels;
-    
-    // Precompute memory offsets for this batch
     const int input_batch_offset = batch_idx * in_channels * input_height * input_width;
-    const int weight_group_offset = g * group_in_channels * group_out_channels * kernel_size * kernel_size;
-    const int weight_channel_stride = group_out_channels * kernel_size * kernel_size;
-    
-    // Accumulators for two consecutive output elements
-    float result0 = 0.0f;
-    float result1 = 0.0f;
-    
-    // Precompute input height bounds checks for both output positions
-    bool h_in_bounds[3];
-    #pragma unroll
-    for (int kh = 0; kh < 3; kh++) {
-        const int input_h = h - kh;
-        h_in_bounds[kh] = (input_h >= 0 && input_h < input_height);
-    }
-    
-    // Precompute weight base indices for each kernel position
-    int weight_base_idx[9];
-    #pragma unroll
-    for (int kh = 0; kh < 3; kh++) {
-        #pragma unroll
-        for (int kw = 0; kw < 3; kw++) {
-            weight_base_idx[kh * 3 + kw] = weight_group_offset + group_c * 9 + (kh * 3 + kw);
+
+    // Loop over input channels in chunks of TILE_IC
+    for (int ic_base = 0; ic_base < in_channels; ic_base += TILE_IC) {
+        
+        // 1. Load Input Tile to SMEM
+        // Total floats to load: TILE_IC * INPUT_TILE_H * INPUT_TILE_W = 16 * 10 * 34 = 5440
+        const int num_input_elements = TILE_IC * INPUT_TILE_H * INPUT_TILE_W;
+        
+        #pragma unroll 2
+        for (int i = tid; i < num_input_elements; i += 256) {
+            // Map linear index i to (ic, h_in_local, w_in_local)
+            int rem = i;
+            const int w_local = rem % INPUT_TILE_W; rem /= INPUT_TILE_W;
+            const int h_local = rem % INPUT_TILE_H; 
+            const int ic_local = rem / INPUT_TILE_H; 
+            
+            const int ic = ic_base + ic_local;
+            
+            // Calculate global input coordinates
+            // -2 offset assumes 3x3 kernel and specific tiling logic from optimization strategy
+            const int h_in = out_h_start + h_local - 2;
+            const int w_in = out_w_start + w_local - 2;
+
+            float val = 0.0f;
+            if (ic < in_channels && h_in >= 0 && h_in < input_height && w_in >= 0 && w_in < input_width) {
+                const int input_idx = input_batch_offset + ic * (input_height * input_width) + h_in * input_width + w_in;
+                val = to_float(input[input_idx]);
+            }
+            smem_input[ic_local][h_local][w_local] = val;
         }
-    }
-    
-    // Check if second output element is within bounds
-    const int w1 = w_base + 1;
-    const bool second_output_valid = (w1 < output_width);
-    
-    // Tiled computation with thread coarsening
-    #pragma unroll
-    for (int kh = 0; kh < CHILD_TILE_KH; kh++) {
-        if (!h_in_bounds[kh]) continue;
+
+        // 2. Load Weight Tile to SMEM
+        // Optimization: Coalesced Global Memory Access
+        // We iterate linearly over the Global Memory layout [IC][OC][KH][KW] (stride 1)
+        // and scatter to Shared Memory layout [IC][KH][KW][OC].
         
-        const int input_h = h - kh;
-        const int input_h_offset = input_h * input_width;
-        
+        const int num_weight_elements = TILE_IC * 32 * KERNEL_DIM * KERNEL_DIM;
+        // Base pointer for current IC chunk in flattened global weight array
+        // Global Weight Layout: (In, Out, KH, KW)
+        const int weight_chunk_start = ic_base * (out_channels * 9);
+
+        #pragma unroll 2
+        for (int i = tid; i < num_weight_elements; i += 256) {
+            float val = 0.0f;
+            // Bounds check
+            if (weight_chunk_start + i < in_channels * out_channels * 9) {
+                val = to_float(weight[weight_chunk_start + i]);
+            }
+
+            // Map linear 'i' from Global [IC_sub][OC][KH][KW] to SMEM [IC_sub][KH][KW][OC]
+            // i decomposition:
+            // i = ic_local * (32*9) + oc * 9 + kh * 3 + kw
+            int rem = i;
+            const int kw = rem % 3; rem /= 3;
+            const int kh = rem % 3; rem /= 3;
+            const int oc = rem % 32; 
+            const int ic_local = rem / 32;
+
+            smem_weight[ic_local][kh][kw][oc] = val;
+        }
+
+        __syncthreads();
+
+        // 3. Compute
         #pragma unroll
-        for (int kw = 0; kw < CHILD_TILE_KW; kw++) {
-            // Calculate input positions for both output elements
-            const int input_w0 = w_base - kw;
-            const int input_w1 = w1 - kw;
-            
-            const bool in_bounds0 = (input_w0 >= 0 && input_w0 < input_width);
-            const bool in_bounds1 = second_output_valid && (input_w1 >= 0 && input_w1 < input_width);
-            
-            if (in_bounds0 || in_bounds1) {
-                const int input_spatial_idx0 = input_h_offset + input_w0;
-                const int input_spatial_idx1 = input_h_offset + input_w1;
-                const int weight_idx_offset = weight_base_idx[kh * 3 + kw];
-                
-                // Process input channels in tiles of TILE_IC
-                for (int ic_tile = 0; ic_tile < group_in_channels; ic_tile += CHILD_TILE_IC) {
-                    // Load input values for both positions with coalesced access
-                    float input_vals0[CHILD_TILE_IC];
-                    float input_vals1[CHILD_TILE_IC];
+        for (int ic_local = 0; ic_local < TILE_IC; ++ic_local) {
+            #pragma unroll
+            for (int kh = 0; kh < 3; ++kh) {
+                #pragma unroll
+                for (int kw = 0; kw < 3; ++kw) {
+                    const int smem_h = ty - kh + 2;
+                    const int smem_w = tx - kw + 2;
                     
-                    #pragma unroll
-                    for (int i = 0; i < CHILD_TILE_IC; i++) {
-                        const int ic = ic_tile + i;
-                        const int input_channel_offset = (g * group_in_channels + ic) * input_height * input_width;
-                        
-                        if (in_bounds0) {
-                            const int input_idx0 = input_batch_offset + input_channel_offset + input_spatial_idx0;
-                            input_vals0[i] = to_float(input[input_idx0]);
-                        }
-                        
-                        if (in_bounds1) {
-                            const int input_idx1 = input_batch_offset + input_channel_offset + input_spatial_idx1;
-                            input_vals1[i] = to_float(input[input_idx1]);
-                        }
-                    }
+                    float in_val = smem_input[ic_local][smem_h][smem_w];
                     
-                    // Load weight values with stride-aware access
-                    float weight_vals[CHILD_TILE_IC];
+                    // Accumulate for all 32 output channels
+                    // Accesses to smem_weight are contiguous in memory (OC dimension)
                     #pragma unroll
-                    for (int i = 0; i < CHILD_TILE_IC; i++) {
-                        const int ic = ic_tile + i;
-                        const int weight_idx = weight_idx_offset + ic * weight_channel_stride;
-                        weight_vals[i] = to_float(weight[weight_idx]);
-                    }
-                    
-                    // FMA accumulation with ILP for both output positions
-                    #pragma unroll
-                    for (int i = 0; i < CHILD_TILE_IC; i++) {
-                        if (in_bounds0) {
-                            result0 += input_vals0[i] * weight_vals[i];
-                        }
-                        if (in_bounds1) {
-                            result1 += input_vals1[i] * weight_vals[i];
-                        }
+                    for (int oc = 0; oc < 32; ++oc) {
+                        acc[oc] += in_val * smem_weight[ic_local][kh][kw][oc];
                     }
                 }
             }
         }
+        __syncthreads();
     }
+
+    // Write output
+    const int h_out = out_h_start + ty;
+    const int w_out = out_w_start + tx;
     
-    // Add bias if provided (bias=False for this problem)
-    if (bias != nullptr) {
-        const float bias_val = to_float(bias[c]);
-        result0 += bias_val;
-        result1 += bias_val;
-    }
-    
-    // Coalesced write to output for first position
-    const int output_batch_offset = batch_idx * out_channels * output_spatial;
-    const int output_idx0 = output_batch_offset + c * output_spatial + spatial_idx_base;
-    write_output(output, output_idx0, result0);
-    
-    // Write second output if valid
-    if (second_output_valid) {
-        const int output_idx1 = output_idx0 + 1;
-        write_output(output, output_idx1, result1);
+    if (h_out < output_height && w_out < output_width) {
+        const int out_base_idx = batch_idx * out_channels * output_spatial + h_out * output_width + w_out;
+        const int channel_stride = output_spatial;
+        
+        #pragma unroll
+        for (int oc = 0; oc < 32; ++oc) {
+             if (oc < out_channels) {
+                 float val = acc[oc];
+                 if (bias != nullptr) {
+                     val += to_float(bias[oc]);
+                 }
+                 write_output(output, out_base_idx + oc * channel_stride, val);
+             }
+        }
     }
 }
-
 // PART-END
 
 // Part 3: (the top-level interface for encapsulating into a Torch operator)
@@ -397,16 +230,12 @@ torch::Tensor conv_transpose2d_cuda(
         return output;
     }
     
-    // Configure single kernel grid and block
-    const int output_spatial = output_height * output_width;
-    const int grid_x = (output_spatial + CHILD_BLOCK_SIZE_X * 2 - 1) / (CHILD_BLOCK_SIZE_X * 2);
-    const int grid_y = (out_channels + CHILD_BLOCK_SIZE_Y - 1) / CHILD_BLOCK_SIZE_Y;
-    const int grid_z = batch_size;
-    
-    dim3 grid(grid_x, grid_y, grid_z);
-    dim3 block(CHILD_BLOCK_SIZE_X, CHILD_BLOCK_SIZE_Y);
-    
-    // Launch single kernel without dynamic parallelism
+    // Optimized Kernel Configuration
+    // Block: 32x8 (256 threads) covers 32x8 spatial tile
+    // Grid: Covers (Width, Height, Batch)
+    dim3 block(32, 8);
+    dim3 grid((output_width + 31) / 32, (output_height + 7) / 8, batch_size);
+
     if (input.scalar_type() == torch::kFloat32) {
         conv_transpose2d_single_kernel<float><<<grid, block>>>(
             input.data_ptr<float>(),
@@ -450,7 +279,6 @@ torch::Tensor conv_transpose2d_cuda(
         TORCH_CHECK(false, "CUDA kernel launch failed: ", cudaGetErrorString(err));
     }
     
-    // Synchronize to ensure kernel completes
     cudaDeviceSynchronize();
     
     return output;
